@@ -1,0 +1,16 @@
+body {
+    height: 100%;
+}
+
+.bg {
+    /* The image used */
+    background-image: url("https://cdn.helix.com/wp-content/uploads/2017/09/2017-09-29-15_10_57.gif");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
