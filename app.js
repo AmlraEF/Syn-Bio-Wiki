@@ -24,7 +24,7 @@ app.get('*', (req, res) => {
 });
 
 // Set server to listen on port
-const port = 5000;
+const port = 3000;
 app.listen(port, () => {
  console.log(`Server is listening on port ${port}`);
 });
