@@ -1,7 +1,6 @@
 {
   "name": "syn-bio-wiki",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "dependencies": {
     "express": "^4.16.4"
@@ -19,5 +18,6 @@
   "bugs": {
     "url": "https://github.com/AmlraEF/Syn-Bio-Wiki/issues"
   },
-  "homepage": "https://github.com/AmlraEF/Syn-Bio-Wiki#readme"
+  "homepage": "https://github.com/AmlraEF/Syn-Bio-Wiki#readme",
+  "description": ""
 }
