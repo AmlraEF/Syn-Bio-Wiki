@@ -1,7 +1,7 @@
 // Require dependencies
 const express = require('express');
 const path = require('path');
-const PORT = process.env.PORT || 5000
+const port = process.env.PORT || 5000
 const app = express('express');
 
 // Use EJS as view engine, rendering .ejs files from the views folder
