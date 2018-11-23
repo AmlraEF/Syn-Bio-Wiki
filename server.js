@@ -18,6 +18,10 @@ app.get('/notebook', (req, res) => {
   res.render('Notebook');
 });
 
+app.get('/Safety', (req, res) => {
+  res.render('Safety');
+});
+
 // Catch-all route
 app.get('*', (req, res) => {
   res.redirect('/');
