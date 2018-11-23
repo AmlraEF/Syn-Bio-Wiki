@@ -18,8 +18,8 @@ app.get('/notebook', (req, res) => {
   res.render('Notebook');
 });
 
-app.get('/Safety', (req, res) => {
-  res.render('Safety');
+app.get('/human_practices', (req, res) => {
+  res.render('HumanPractices');
 });
 
 // Catch-all route
