@@ -3,3 +3,15 @@ body{
 position: relative;
 
 }
+.affix-top {
+  position: relative;
+}
+
+.affix {
+  top: 20px;
+}
+
+.affix,
+.affix-bottom {
+    width: 213px;
+}
