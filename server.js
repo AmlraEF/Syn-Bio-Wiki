@@ -22,6 +22,10 @@ app.get('/human_practices', (req, res) => {
   res.render('HumanPractices');
 });
 
+app.get('/team', (req, res) => {
+  res.render('Team');
+});
+
 // Catch-all route
 app.get('*', (req, res) => {
   res.redirect('/');
