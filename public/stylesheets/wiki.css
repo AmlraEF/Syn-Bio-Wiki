@@ -30,9 +30,8 @@ position: relative;
     padding: 5px; /* Some padding */
     border-radius: 10px; /* Rounded corners */
     font-size: 18px; /* Increase font size */
-    object-fit: contain;
-    max-height: 100%;
-    max-width: 100%;
+    max-height: 1%;
+    max-width: 1%;
 }
 
 #myBtn:hover {
