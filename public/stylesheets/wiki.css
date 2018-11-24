@@ -1,17 +1,5 @@
-@import "compass/css3";
-body {
-    position: relative;
-}
-.affix {
-  top: 0;
-  width: 100%;
-}
+body{
 
-.affix-top {
-  width: 100%;
-}
+position: relative;
 
-.affix-bottom {
-  position: absolute;
-  width: 100%;
 }
