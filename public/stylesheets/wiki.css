@@ -5,12 +5,6 @@ position: relative;
 }
 
 
-ul.nav-pills {
-  top: 20px;
-  position: fixed;
-}
-
-
 .affix-top {
   position: relative;
 }
