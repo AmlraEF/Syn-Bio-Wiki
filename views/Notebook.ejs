@@ -1,76 +1,9 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="/stylesheets/wiki.css">
-    <link rel="shortcut icon" href="/gene-icon-3184531_960_720.png">
-    <title>SynBioWiki</title>
-  </head>
-  <body data-spy="scroll" data-target="#sidebar">
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #A2D9CE">
-      <a class="navbar-brand" href="/">
-        <img src="gene-icon-3184531_960_720.png" width="30" height="30" alt=""> SynBio Wiki
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="/">   Home<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Team</a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="/team">Team members</a>
-              <a class="dropdown-item" href="#">Collaborations</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Project</a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">Description</a>
-              <a class="dropdown-item" href="#">Design</a>
-              <a class="dropdown-item" href="#">Experiments</a>
-              <a class="dropdown-item" href="/notebook">Notebook</a>
-              <a class="dropdown-item" href="#">InterLab</a>
-              <a class="dropdown-item" href="#">Model</a>
-              <a class="dropdown-item" href="#">Results</a>
-              <a class="dropdown-item" href="#">Demonstrate</a>
-              <a class="dropdown-item" href="#">Improve</a>
-              <a class="dropdown-item" href="#">Attributions</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/">Parts<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/">Safety<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/human_practices">Human Practices<span class="sr-only">(current)</span></a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-
-
-
-
-
+<% include partials/header %>
 
 <center><h1>Notebook</h1></center>
 <div class="container">
   <div class="row">
-
-<div class="col-sm-11">
+    <div class="col-9">
 <div class="card text-center">
   <div class="card-header" id="headingOne">
    <button class="btn btn-light collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
@@ -299,6 +232,70 @@
 </p>
 </ul>
 </p>
+    </div>
+  </div>
+</div>
+</div>
+<div class="col-3">
+
+
+  <button class="btn btn-outline-primary btn-lg btn-block" type="button" data-toggle="modal" data-target="#exampleModalLong">Wet Lab Notebook <img src="/tube.png"> Oscillator Team</button>
+
+
+  <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="exampleModalLongTitle">Wet Lab Notebook – Oscillator Team</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+                <p>This lab book details the processes undertaken by the wet lab team to test the workings of modified repressilator.</p>
+                <h4>06/02/19</h4>
+                <p>Our bacteria containing the modified repressilator plasmids arrived today. We ordered 3 plasmids: the integrated repressilator (pLPT20), which has integrated reporters and degradation tags, the integrated repressilator with degradation tags removed (pLPT119), and the titration sponge (pLPT40). It should be noted that pLPT119 and pLPT20 are ampicillin resistant, whilst pLPT40 is kanamycin resistant.</p>
+                <p>The plasmids were housed in DH5&alpha; E.coli in an agar stab. Our first task was to extract and grow out the bacteria. We did so by streaking the bacteria onto 3 separate Petri dishes and allowing them to grow at 37&deg;C for 24 hours.</p>
+                <h4>07/02/19</h4>
+                <p>Today we checked on the bacteria we had streaked yesterday. All 3 were ready for the next step, which is liquid culture. We picked 1 bacterial colony from each Petri dish to ensure that the liquid culture has a monoclonal cell population. The procedure was as follows:</p>
+                <ul>
+                <li>Make sure to work in the presence of a flame to create a sterile environment</li>
+                <li>Add 5ml of Luria Broth (LB) to 3 culture tubes.</li>
+                <li>Add 5&micro;l of 50mg/ml of ampicillin to two of the tubes and 5 &micro;l 35mg/ml of kanamycin to the last tube.</li>
+                <li>Use a pipette tip to pick 1 colony of bacteria and drop it into the appropriate culture tube.</li>
+                <li>Repeat for the other 2 bacteria.</li>
+                <li>Close the culture tubes to 1 click. Make sure not to close fully, as the bacteria need air to grow.</li>
+                <li>Place in a shaking 37&deg;C incubator for approximately 24 hours. The shaking is to aerate the culture.</li>
+                </ul>
+                <h4>08/02/19</h4>
+                <p>The first task for today was to make up a glycerol stock using the liquid cultures, which is used to freeze the bacteria. Using glycerol reduces the chance of water crystals rupturing cell membranes during freezing. The process was as follows:</p>
+                <ul>
+                <li>Add 500&micro;l of glycerol to a centrifuge tube.</li>
+                <li>Add 500&micro;l of the bacteria solution to the same tube.</li>
+                <li>Centrifuge for 5 minutes at 6700rpm.</li>
+                <li>ASK JACK FOR PROTOCOL</li>
+                </ul>
+                <p>The next stage of the process was transformation. This is needed as the plasmids need to be added to a wild type E. coli, so they had to be removed from DH5&alpha; and added to the MG1655 strain of E.coli. The original paper used the MC4100 strain, which we will also be testing if we are able to procure it. The process of transformation was as follows:</p>
+                <ul>
+                <li>Remove MG1655 from the -80&deg;C freezer and place in ice.</li>
+                <li>Add 2&micro;l of each plasmid stock to separate micro-centrifuge tubes.</li>
+                <li>Add 0.5&micro;l of a control plasmid (pUC19) into a fourth micro-centrifuge tube.</li>
+                <li>Add 50&micro;l of MG1655 to each plasmid stock.</li>
+                <li>Leave at 4&deg;C for 30 minutes.</li>
+                <li>Heat shock for 1 minute at 42&deg;C.</li>
+                <li>Add 50&micro;l of nutrient dense SOC media to each tube.</li>
+                <li>Leave to incubate at 37&deg;C for 1 hour.</li>
+                <li>Streak each plasmid solution onto 2 Petri dishes: 90% in one plate and 10% in the other.</li>
+                <li>Leave to incubate at 37&deg;C for 24 hours.</li>
+                </ul>
+                <p>The MG1655, which was already in the lab, contains calcium chloride to help open pores in the bacteria. Paired with the heat shock, the bacterial pores should open enough to allow the plasmids enter. The addition of a nutrient dense medium after this ensures the bacteria are able to survive the temperature fluctuations we have put them through. The bacteria are then left for 1 hour to ensure that at least one full cell cycle has occurred. However, they must not be left for too long, as the selective pressure must be maintained. Without the selective pressure, the plasmids might be ejected from the cells, as the antibiotic resistance they confer is no longer of use to the bacteria.</p>
+                <h4>09/02/19</h4>
+                <p>The same process as detailed on 07/02/19 was repeated to transfer the colonies into liquid culture.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
     </div>
   </div>
 </div>
