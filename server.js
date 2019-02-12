@@ -22,6 +22,10 @@ app.get('/human_practices', (req, res) => {
   res.render('HumanPractices');
 });
 
+app.get('/description', (req, res) => {
+  res.render('description');
+});
+
 app.get('/team', (req, res) => {
   res.render('Team');
 });
