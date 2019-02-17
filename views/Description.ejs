@@ -1,19 +1,11 @@
 <% include partials/header %>
-
+<div class="container-fluid">
 <h1>Description&nbsp;</h1>
+<br>
 <p>Our project is rooted in synthetic biology. The goal is to design and build a library of stable, robust, tuneable toggle switches and oscillators. The group has split in half, with 4 students working on the oscillator and 4 students working on the toggle switch. We first conducted a literature review to find the optimal design to construct these systems. Next, we set about implementing the chosen models in the dry lab. Once most of the computer modelling was complete, we began constructing and testing the models in the wet lab.</p>
 <p>This wiki details the research, dry lab and wet lab aspects of our project. It also explores the potential applications of the genetic circuits, and the ethical impact of synthetic biology.&nbsp;</p>
-<h1>Background</h1>
-<h3><strong>First of all</strong><strong>, what is synthetic biology?</strong>&nbsp;</h3>
-<p>Synthetic biology is an engineering approach to biology. Through a process of increasing abstraction, engineers use sequences of DNA to form genetic parts, use these parts to build devices, and then combine these devices into circuits and systems. All of this must occur within a living organism, or &lsquo;chassis&rsquo;, and therein lies the field&rsquo;s unique challenge -how to harness, unpredictable cellular processes for our own ends? It is against this backdrop that our project is set.&nbsp;</p>
-<h3><strong>Toggle Switch:</strong>&nbsp;</h3>
-<p>In terms of the toggle switch, most of the ground-breaking research is based on <em>Construction of a genetic Toggle Switch in Escherichia Coli</em> by Gardner, T <em>et al</em>. In this paper, Gardner demonstrates a basic toggle switch design consisting of any two repressible promoters arranged in a mutually inhibitory network that produce two, non-oscillating steady states.</p>
-<p>To explain simply, there are two promoters which transcribe their opposing repressors, which in turn repress their adjacent promoters. This means that there are two states; one where repressor 1 is maximally transcribed and another when repressor 2 is maximally transcribed&nbsp;</p>
-<p>By introducing an inducer, the repressor is inhibited which allows the adjacent promoter to be transcribed and cause a switch of the stable state.&nbsp;</p>
-<h3><strong>Oscillator</strong>&nbsp;</h3>
-<p>A genetic oscillator is a system of genes that will be expressed in a way which results in the oscillation of the concentration of a specific molecule, such as green fluorescent protein. For an oscillator to be useful, it must operate predictably in a range of conditions, remain synchronous at the population-level, as well as having reliable amplitude and periodicity of oscillation.</p>
-<p>Having reviewed eight different genetic oscillators, we have decided on the modified repressilator design by Potvin-Trottier<em> et al</em>. To begin with, we researched the original repressilator model, which was introduced by Elowitz and Leibler in <em>A synthetic oscillatory network of transcriptional regulators</em>. A repressilator consists of an odd number of repressor proteins coupled together in a loop. Oscillations are achieved in the proteins&rsquo; concentrations through alternating repression of a protein by the previous one in the loop. The inherent delay in the mechanism is the key to achieving an oscillatory output. The addition of a reporter, in the form of GFP, gives a visual representation of these oscillations.</p>
-
+<br>
+</div>
 
 
 <% include partials/footer %>
