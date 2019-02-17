@@ -23,7 +23,7 @@ app.get('/human_practices', (req, res) => {
 });
 
 app.get('/description', (req, res) => {
-  res.render('description');
+  res.render('Description');
 });
 
 app.get('/team', (req, res) => {
