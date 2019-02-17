@@ -22,6 +22,10 @@ app.get('/human_practices', (req, res) => {
   res.render('HumanPractices');
 });
 
+app.get('/bnd', (req, res) => {
+  res.render('BnD');
+});
+
 app.get('/description', (req, res) => {
   res.render('Description');
 });
