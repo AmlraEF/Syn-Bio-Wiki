@@ -4,6 +4,9 @@ position: relative;
 
 }
 
+p:target {
+   background-color: #ffa;
+}
 
 .affix-top {
   position: relative;
