@@ -1,11 +1,24 @@
 body{
 
 position: relative;
+padding-bottom: 50px;
 
 }
 
-p:target {
-   background-color: #ffa;
+sub:target {
+   -webkit-animation: mymove 1s; /* Safari 4.0 - 8.0 */
+   animation: mymove 1s;
+}
+
+@-webkit-keyframes mymove {
+  from {background-color: #ffa;}
+  to {background-color: transparent;}
+}
+
+
+@keyframes mymove {
+  from {background-color: #ffa;}
+  to {background-color: transparent;}
 }
 
 .affix-top {
