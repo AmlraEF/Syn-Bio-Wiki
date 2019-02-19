@@ -26,6 +26,10 @@ app.get('/bnd', (req, res) => {
   res.render('BnD');
 });
 
+app.get('/references', (req, res) => {
+  res.render('References');
+});
+
 app.get('/description', (req, res) => {
   res.render('Description');
 });
