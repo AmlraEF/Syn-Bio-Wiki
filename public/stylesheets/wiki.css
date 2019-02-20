@@ -5,6 +5,20 @@ padding-bottom: 50px;
 
 }
 
+
+
+.paddedtitle {
+  padding-top:30px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+}
+
+h3 {
+  padding-top:30px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+
 sub:target {
    -webkit-animation: mymove 1s; /* Safari 4.0 - 8.0 */
    animation: mymove 1s;
