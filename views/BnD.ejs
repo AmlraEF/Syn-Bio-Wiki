@@ -1,8 +1,8 @@
 <% include partials/header %>
 <div class="container">
-<h1>Background</h1>
+<h1 class="paddedtitle">Background</h1>
 <br>
-<h3><strong>First of all, what is synthetic biology?</strong></h3>
+<h3 class="subtitleb"><strong>First of all, what is synthetic biology?</strong></h3>
 <p>Synthetic biology is an engineering approach to biology. Through a process of increasing abstraction, engineers use sequences of DNA to form genetic parts, use these parts to build devices, and then combine these devices into circuits and systems. All of this must occur within a living organism, or &lsquo;chassis&rsquo;, and therein lies the field&rsquo;s unique challenge - how to harness, unpredictable cellular processes for our own ends? It is against this backdrop that our project is set.</p>
 <h3><strong>How did synthetic biology start?</strong></h3>
 <p>Synthetic biology began with the advent of molecular biology. Once scientists were able to harness molecular machinery to clone and modify DNA, they could begin to construct synthetic circuits using DNA. During the &lsquo;modules era&rsquo; of synthetic biology, several circuits that were initially confined to the realm of electrical engineering were then realised in living organisms. We are now in the &lsquo;systems era&rsquo;, where the emphasis is placed on potential applications of the circuits to medicine, bioenergy and the environment. <a href="#[1]">(D. E. Cameron <em>et al.)<a></em></p>
@@ -20,6 +20,7 @@
 </ul>
 <h3><strong>Toggle Switch Design</strong></h3>
 <p>The bistable toggle switch consists of two promoters and two repressors. The second operon is composed of the promoter 2, the repressor for promoter 1 called repressor 1 and a reporter GFP. Therefore, the GFP reports for the expression level of repressor 1. The figure below shows this design. Bistability of the toggle arises from the mutually inhibitory arrangement of the repressor genes.</p>
+<center><img style="height: 100%; width:100%;" src="https://upload.wikimedia.org/wikipedia/commons/2/25/Syn_switch.gif"><br> <!-- Candidomolino [<a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>], <a href="https://commons.wikimedia.org/wiki/File:Syn_switch.gif">via Wikimedia Commons</a> --></center><br>
 <p>In the absence of inducer there are two stable states possible:</p>
 <ul>
 <li>'low' state: repressor 2 is transcribed and repressor 1 is repressed</li>
@@ -27,7 +28,15 @@
 </ul>
 <p>Assuming the switch is in a stable position, addition of inducer (IPTG, aTc or heat) for the repressed repressor causes full activation of transcription, until the originally active repressor is repressed. In this manner the inducers allow to switch between the two stable states. For example, for a pTAK plasmid, one promoter-repressor pair used is the Lac repressor (lacI) in conjunction with the Ptrc-2 promoter. The other promoter-repressor pair (P1, R1), uses PLs1con promoter in conjunction with a temperature-sensitive &lambda; repressor (cIts). Upon switching to high state, the plasmid will express GFPmut3 in the absence of inducer. Switching is accomplished by transiently introducing an inducer of the currently active repressor. The inducer permits the opposing repressor to be maximally transcribed until it stably represses the originally active promoter.</p>
 <h3><strong>Oscillator Design</strong></h3>
-<p>The modified repressilator <a href="#[12]">(Potvin-Trottier <em>et al.</em>)</a> is our chosen oscillator. It is modelled on the original repressilator <a href="#[13]">(Elowitz and Leibler)</a>, with a few key modifications aiming to enhance the simplicity of the biochemical processes. To understand the modifications, we must first understand how the original repressilator works. It consists of a negative feedback loop of 3 promoters, each coding for a transcriptional repressor of the next promoter. This gene system succeeded in producing oscillations of the GFP concentration within many individual cells, however across the cell population these oscillations were out of phase with each other. The system was also highly noisy, with significant deviations in amplitude and period. Potvin-Trottier <em>et al. </em>made the following modifications to remedy these problems:</p>
+<div class="row">
+<div class="col-sm-8">
+  <p>The modified repressilator <a href="#[12]">(Potvin-Trottier <em>et al.</em>)</a> is our chosen oscillator. It is modelled on the original repressilator <a href="#[13]">(Elowitz and Leibler)</a>, with a few key modifications aiming to enhance the simplicity of the biochemical processes. To understand the modifications, we must first understand how the original repressilator works. It consists of a negative feedback loop of 3 promoters, each coding for a transcriptional repressor of the next promoter. This gene system succeeded in producing oscillations of the GFP concentration within many individual cells, however across the cell population these oscillations were out of phase with each other. The system was also highly noisy, with significant deviations in amplitude and period. Potvin-Trottier <em>et al. </em>made the following modifications to remedy these problems:</p>
+</div>
+<div class="col-sm-4">
+  <br><center><img style="height: 62%; width:62%; margin-top:-8%;" src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Repressilator.gif"><!-- Candidomolino [<a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>], <a href="https://commons.wikimedia.org/wiki/File:Repressilator.gif">via Wikimedia Commons</a> -->
+</div>
+</div>
+<br>
 <ul>
 <li>Removal of degradation tags: the presence of degradation tags in the original repressilator induced competition for proteases which caused fluctuations to propagate via the proteolysis system. Removing the degradation tags reduced this source of error in the system.</li>
 <li>Integration of reporter into the main repressilator plasmid: this was experimentally found to reduce the relative standard deviation in amplitude from 78% to 36%.</li>
