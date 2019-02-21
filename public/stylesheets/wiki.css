@@ -5,10 +5,18 @@ padding-bottom: 50px;
 
 }
 
+.thinfonted {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+}
 
+.lightfonted {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+}
 
 .paddedtitle {
-  padding-top:30px;
+  padding-top:20px;
   font-family: 'Roboto', sans-serif;
   font-weight: 900;
 }
