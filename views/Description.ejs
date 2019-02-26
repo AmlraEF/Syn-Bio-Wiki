@@ -1,18 +1,30 @@
 <% include partials/header %>
 <div class="container">
-<<<<<<< HEAD
 <h1 class="paddedtitle">Description</h1>
-=======
-<h1>Description</h1>
->>>>>>> 4a69db576f79198611a039e76b377b9447909973
-<br>
 <p>Our project is rooted in synthetic biology; the subject has now reached a stage where devices are now designed to contribute
 much more to the understanding of how certain diseases work instead of figuring out the dynamics of
 simple processes. The primary aim of our project is to design and build a library of stable, robust and tuneable toggle switches and oscillators. The group has split in half, with 4 students working on the oscillator and 4 students working on the toggle switch. We first conducted a literature review to find the optimal design to construct these systems. Next, we set about implementing the chosen models in the dry lab. Once most of the computer modelling was complete, we began constructing and testing the models in the wet lab.</p>
 <p>Within each sub group for both the toggle switch and repressilator, work has been spread out evenly between the wet lab and dry lab work. The dry labs consist of, initially, constructing models that mirror the equations that were found describing the function of each circuit, and then running simulations that consider the different parameters which the wet lab teams will be using. Therefore, the models and simulations will provide a reference point for the wet lab work which will help derive the optimal parameters needed for part selection.   </p>
 <p>This wiki details the research, dry lab and wet lab aspects of our project. It also explores the potential applications of the genetic circuits, and the ethical impact of synthetic biology.&nbsp;</p>
-<br>
+<h3 class="subtitleb">Toggle Switch:</h3>
+<p>In terms of the toggle switch, most of the ground-breaking research is based on&nbsp;<a href="#[1]"><em>Construction of a genetic Toggle Switch in Escherichia Coli</em>&nbsp;by Gardner, T&nbsp;<em>et al</em></a>. In this paper, Gardner demonstrates a basic toggle switch design consisting of any two repressible promoters arranged in a mutually inhibitory network that produce two, non-oscillating steady states.&nbsp;&nbsp;</p>
+<p>At its core, the toggle switch consists of&nbsp;two promoters which transcribe their opposing repressors, which in turn repress their adjacent promoters. This means that there are two states; one where repressor 1 is maximally transcribed and another when repressor 2 is maximally transcribed.&nbsp;</p>
+<p>By introducing an inducer, the repressor is inhibited which allows the adjacent promoter to be transcribed and cause a switch of the stable state.&nbsp;</p>
+<br><center><img style="height: 100%; width:100%;" src="Description-pics/toggleswitchdesign.png"></center>
+<h3 class="subtitleb">Oscillator:</h3>
+<p>A genetic oscillator is a system of genes that will be expressed in a way which results in the oscillation of the concentration of a specific molecule, such as green fluorescent protein&nbsp;(GFP). For an oscillator to be useful, it must operate predictably in a range of conditions, remain synchronous at the population-level, as well as having reliable amplitude and periodicity of oscillation.&nbsp;&nbsp;</p>
+<p>Having reviewed eight different genetic oscillators, we have decided on the modified repressilator design by <a href="#[2]">Potvin-Trottier<em>&nbsp;et al</em></a>. To begin with, we researched the original repressilator model, which was introduced by <a href="#[3]">Elowitz and Leibler in&nbsp;<em>A synthetic oscillatory network of transcriptional regulators</em></a>. A repressilator consists of an odd number of repressor proteins coupled together in a loop. Oscillations are achieved in the proteins&rsquo; concentrations through alternating repression of a protein by the previous one in the loop. The inherent delay in the mechanism is the key to achieving an oscillatory output. The addition of a reporter, in the form of GFP, gives a visual representation of these oscillations.&nbsp;</p>
 
+
+
+
+<!-- references -->
+<br><br>
+<hr>
+<sub id="[1]">[1] T. S. Gardner, C. R. Cantor and J. J. Collins, “Construction of a genetic toggle switch in Escherichia coli,” Nature, 2000.</sub>
+<br><sub id="[2]">[2] L. Potvin-Trottier, N. D. Lord, G. Vinnicombe and J. Paulsson, “Synchronous long-term oscillations in a synthetic gene circuit,” Nature, 2016. </sub>
+<br><sub id="[3]">[3] M. B. Elowitz and S. Leibler, “A synthetic oscillatory network of transcriptional regulators,” Nature, 2000. </sub>
+<br><sub><a href="/references">see all references</a></sub>
 
 </div>
 
