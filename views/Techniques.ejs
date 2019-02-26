@@ -2,7 +2,28 @@
 <div class ="container">
 <h1>Techniques</h1>
 <br>
-<p>
+<p><strong>Background Information:</strong> (Iverson, S., Haddock, T., Beal, J., & Densmore, D. (2016)
+<br>
+MoClo relies upon Type IIS restriction enzymes (BbsI and BsaI) that each recognize a 6 bp nonpalindromic sequence and cut at a specified distance from that recognition sequence, resulting in modular overhanging 4 bp fusion sites.</p>
+<br><center><img style="height: 100%; width:100%;" src="notebookfiles/Research on parts (CIDAR cloning), model parameters and applications (Entrainment)/2-Figure1-1.PNG"></center>
+<br><br>
+<p>The CIDAR MoClo Library is provided on a 96-well plate (Addgene, no. 1000000059). A standard CIDAR MoClo assembly is based on four-part transcription units composed of a promoter, ribosome binding site, coding sequence, and terminator assembled into a DVK (kanamycin-resistance destination vector).
 
+When using MoClo Type IIS enzyme one-pot digestion ligation reactions, the right side of the image shows basic parts with green backbones. They are prepared in DVAs with part-specific fusion sites, indicated by a single capital letter code. The 3′ fusion site of the upstream part must match the 5′ fusion site of the following part in order to be correctly assembled. Digesting parts and a DVK with the BsaI and simultaneous ligation with T4 DNA ligase results in a transcriptional unit (TU) shown here with the orange backbone. Multiple TUs can be combined into a complex device using BbsI in place of BsaI with the appropriate DVA.<p>
+
+<p><strong>Assembly Strategy (Toggle Switch):</strong>
+<br>
+In order of construction for each plasmids are the promoter, the RBS, different coding sequences (lacI/GFP/tet) and a terminator.
+For plasmids 2/2a, the original design of the part insulator_DE is replaced with a spacer_DE which we designed on Benchling to fit the circuit. For the RBS parts B0032-34_EC it is not available in the Benchling library hence we designed it as well so as to fit into our design. </p>
+
+<p><strong>MoClo Cloning Protocols:</strong>:
+<br><center><img style="height: 45%; width:45%;" src="notebookfiles/Research on parts (CIDAR cloning), model parameters and applications (Entrainment)/Protocols.PNG"></center>
+<br><br>
+(Using equimolar PCR product or previously made MoClo DNA parts and the appropriate destination vector).
+In our case we are using 50 fmol for each part. </p>
+<br><br>
+<hr>
+<sub id = "[1]"> [1] Iverson, S., Haddock, T., Beal, J., & Densmore, D. (2016). CIDAR MoClo: Improved MoClo Assembly Standard and New E. coli Part Library Enable Rapid Combinatorial Design for Synthetic and Traditional Biology. ACS Synthetic Biology, 99-103. Retrieved from ACS Synthetic Biology: http://dx.doi.org/10.1021/acssynbio.5b00124</sub>
+<br><sub id = "[2]"> [2] Benchling Bioregistry – used for designing our toggle switch parts. https://benchling.com/
 
 <% include partials/footer %>
