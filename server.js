@@ -38,6 +38,10 @@ app.get('/team', (req, res) => {
   res.render('Team');
 });
 
+app.get('/techniques', (req,res) => {
+  res.render('Techniques')
+})
+
 // Catch-all route
 app.get('*', (req, res) => {
   res.redirect('/');
