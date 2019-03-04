@@ -18,6 +18,10 @@ app.get('/notebook', (req, res) => {
   res.render('Notebook');
 });
 
+app.get('/parts', (req, res) => {
+  res.render('Parts');
+});
+
 app.get('/modelling', (req, res) => {
   res.render('Modelling');
 });
