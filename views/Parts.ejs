@@ -1,0 +1,36 @@
+<% include partials/header %>
+<div class="container">
+<div class="row">
+<div class="col-sm">
+
+<h3 class="subtitleb">Toggle Switch</h3>
+<p><strong>Our Assembly Strategy</strong></p>
+<center><img style="height: 100%; width:100%;" src="Parts/switch.png"></center>
+<p>In order of construction for each plasmids are the promoter, the RBS, different coding sequences (lacI/GFP/tet) and a terminator.</p>
+<p>For plasmids 2/2a, the original design of the part insulator_DE is replaced with a spacer_DE which we designed on Benchling to fit the circuit. For the RBS parts B0032-34_EC it is not available in the Benchling library hence we designed it as well so as to fit into our design.</p>
+
+</div>
+<div class="col-sm">
+
+<h3 class="subtitleb">Oscillator</h3>
+<p>The oscillator we planned to construct, by Potvin-Trottier <em>et al., </em>was already on the market. Therefore, we bought the following pre-constructed plasmids from Addgene:</p>
+<ul>
+<li><a href="https://www.addgene.org/85460/">PLPT20</a>
+<p>This is known as the integrated repressilator &ndash; the only difference between it and the original repressilator is the integration of a reporter into the repressilator plasmid.</p>
+</li>
+</ul>
+<ul>
+<li><a href="https://www.addgene.org/85526/">PLPT119</a>
+<p>This is the modified repressilator &ndash; it has removed degradation tags and has an integrated reporter.</p>
+</li>
+</ul>
+<ul>
+<li><a href="https://www.addgene.org/85524/">PLPT41</a>
+<p>This plasmid is a titration sponge for tetR. Its role is to reduce noise in the system by raising the threshold at which tetR derepression occurs.</p>
+</li>
+</ul>
+<p>The 3 plasmids were then combined such that we could test the oscillations of pLPT119 and pLPT20 by themselves, as well as with the addition of pLPT41.</p>
+</div>
+</div>
+</div>
+<% include partials/footer %>
