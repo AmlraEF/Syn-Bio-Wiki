@@ -57,39 +57,182 @@
 <br>
 <p><strong>Stability Analysis (Oscillator)</strong></p>
 <p>Stability analysis [33] of the following system:</p>
+
+<br>
+<center><img src="modelling/o1.PNG" alt="">
+  </center>
+  <br>
+
 <p>where: i = 1, 2, 3</p>
 <ol>
 <li><strong>Fixed points </strong>can be found by solving the following simultaneous equations:</li>
+
+<br>
+<center><img src="modelling/o2.PNG" alt="">
+  </center>
+  <br>
+
 </ol>
-<p>From equation (35): , simplifying the system to:</p>
+<p>From equation (35): p<sub>1=i</sub> = m<sub>i</sub>, simplifying the system to:</p><br>
+<center><img src="modelling/o3.PNG" alt="">
+  </center>
+  <br>
 <p>For the code developed by the dry lab team to solve this system numerically, access Colab notebook [14]. Solving this system gives:</p>
+
+<br>
+<center><img src="modelling/o4.PNG" alt="">
+  </center>
+  <br>
+
 <p>where</p>
+
+<br>
+<center><img src="modelling/o5.PNG" alt="">
+  </center>
+  <br>
+
 <p>from which we can obtain a more general equation:</p>
+
+<br>
+<center><img src="modelling/o6.PNG" alt="">
+  </center>
+  <br>
+
 <p>The fixed points are given by the above equation.</p>
 
 <p><strong>Eigenvalues</strong> can be found by linearising the dynamics around each fixed point (using the Taylor series expansion):</p>
 
-<p>where<em>,</em> (the Jacobian matrix) and is so small it can be discarded.</p>
-<p>where</p>
-<p>We can solve this using:</p>
-<p>where and the system solution is .</p>
-<p>The Jacobian satisfies the eigenvalue (&lambda;) equation:</p>
-<p>which can be rewritten as:</p>
-<p>This equation can be rearranged into the pair of equations:</p>
-<p>which can also be written as:</p>
-<p>which makes it obvious that there is a relation between the eigenvalues of X (&tau;) and the eigenvalues of the whole system (&lambda;):</p>
-<p>solving this equation for &lambda; gives:</p>
-<p><strong>X</strong> can be factorised to have a factor corresponding to a permutation matrix; therefore, its eigenvalues will lie on the complex unit circle, such that A n-dimensional permutation matrix has eigenvalues that satisfy for some integer k. Factorising <strong>X </strong>gives:</p>
-<p>where the permutation matrix is with k = 3. Therefore, the zeros of &tau; on the complex unit circle are given by the equation , with the solution: for m = 1, 2, 3in the complex plane. This is equivalent to:</p>
-<p>Inserting these solutions into (57) results in six eigenvalues for the system (32) (33):</p>
-<p>The system will be stable if the real part of the &lambda; is negative. To look at the point at which the system changes between stable and unstable, the point should be studied. For , the result is:</p>
-<p>Therefore, for X &lt; 1, &lambda; will be negative. This is ensured since X is negative by definition. and are complex conjugates and lead to the same condition for stability:</p>
-<p>which can be rewritten as:</p>
-<p>where and and obtain the condition:</p>
-<p>The positive sign equation is always satisfied as the cosine is negative for the given angles. Therefore, the negative sign equation is studied:</p>
-<p>By using the relation and plugging it into equation (D37) and squaring gives:</p>
-<p>If we square again and substitute the original terms for the cosine term and</p>
 <br>
+<center><img src="modelling/o7.PNG" alt="">
+  </center>
+  <br>
+
+<p>where<em> <img src="modelling/o8.PNG" alt="">, <img src="modelling/o9.PNG" alt=""></em> (the Jacobian matrix) and <img src="modelling/o10.PNG" alt=""> is so small it can be discarded.</p>
+
+<br>
+<center><img src="modelling/o11.PNG" alt="">
+  </center>
+  <br>
+
+<p>where <img src="modelling/o12.PNG" alt=""></p>
+<p>We can solve this using:</p>
+
+<br>
+<center><img src="modelling/o13.PNG" alt="">
+  </center>
+  <br>
+
+<p>where <img src="modelling/o14.PNG" alt=""> and the system solution is <img src="modelling/o15.PNG" alt="">.</p>
+<p>The Jacobian satisfies the eigenvalue (&lambda;) equation:</p>
+
+<br>
+<center><img src="modelling/o16.PNG" alt="">
+  </center>
+  <br>
+
+<p>which can be rewritten as:</p>
+
+<br>
+<center><img src="modelling/o17.PNG" alt="">
+  </center>
+  <br>
+
+<p>This equation can be rearranged into the pair of equations:</p>
+
+<br>
+<center><img src="modelling/o18.PNG" alt="">
+  </center>
+  <br>
+
+<p>which can also be written as:</p>
+
+<br>
+<center><img src="modelling/o19.PNG" alt="">
+  </center>
+  <br>
+
+<p>which makes it obvious that there is a relation between the eigenvalues of X (&tau;) and the eigenvalues of the whole system (&lambda;):</p>
+
+<br>
+<center><img src="modelling/o20.PNG" alt="">
+  </center>
+  <br>
+
+<p>solving this equation for &lambda; gives:</p>
+
+<br>
+<center><img src="modelling/o21.PNG" alt="">
+  </center>
+  <br>
+
+<p><strong>X</strong> can be factorised to have a factor corresponding to a permutation matrix; therefore, its eigenvalues will lie on the complex unit circle, such that A n-dimensional permutation matrix has eigenvalues that satisfy for some integer k. Factorising <strong>X </strong>gives:</p>
+
+<br>
+<center><img src="modelling/o22.PNG" alt="">
+  </center>
+  <br>
+
+<p>where the permutation matrix is <img src="modelling/o23.PNG" alt=""> with k = 3. Therefore, the zeros of &tau; on the complex unit circle are given by the equation <img src="modelling/o24.PNG" alt="">, with the solution: for m = 1, 2, 3in the complex plane. This is equivalent to:</p>
+
+<br>
+<center><img src="modelling/o25.PNG" alt="">
+  </center>
+  <br>
+
+<p>Inserting these solutions into (57) results in six eigenvalues for the system (32) (33):</p>
+
+<br>
+<center><img src="modelling/o26.PNG" alt="">
+  </center>
+  <br>
+
+<p>The system will be stable if the real part of the &lambda; is negative. To look at the point at which the system changes between stable and unstable, the point should be studied. For &tau;<sub>1</sub> = X = 1, the result is:</p>
+
+<br>
+<center><img src="modelling/o27.PNG" alt="">
+  </center>
+  <br>
+
+<p>Therefore, for X &lt; 1, &lambda; will be negative. This is ensured since X is negative by definition.&tau;<sub>2</sub> and &tau;<sub>3</sub> are complex conjugates and lead to the same condition for stability:</p>
+
+<br>
+<center><img src="modelling/o28.PNG" alt="">
+  </center>
+  <br>
+
+<p>which can be rewritten as:</p>
+
+<br>
+<center><img src="modelling/o29.PNG" alt="">
+  </center>
+  <br>
+
+<p>where <img src="modelling/o30.PNG" alt=""> and <img src="modelling/o31.PNG" alt=""> and obtain the condition:</p>
+
+<br>
+<center><img src="modelling/o32.PNG" alt="">
+  </center>
+  <br>
+
+<p>The positive sign equation is always satisfied as the cosine is negative for the given angles. Therefore, the negative sign equation is studied:</p>
+
+<br>
+<center><img src="modelling/o33.PNG" alt="">
+  </center>
+  <br>
+
+<p>By using the relation <img src="modelling/o34.PNG" alt=""> and plugging it into the above equation and squaring gives:</p>
+
+<br>
+<center><img src="modelling/o35.PNG" alt="">
+  </center>
+  <br>
+
+<p>If we square again and substitute the original terms for the cosine term and &rho;:</p>
+<br>
+<center><img src="modelling/o36.PNG" alt="">
+  </center>
+  <br>
 
 <p><strong>Effect of Parameters and Initial Conditions</strong></p>
 
