@@ -54,6 +54,14 @@ app.get('/safety', (req,res) => {
   res.render('Safety')
 })
 
+app.get('/modelling_ts', (req, res) => {
+  res.render('modelling_ts');
+});
+
+app.get('/modelling_o', (req, res) => {
+  res.render('modelling_o');
+});
+
 // Catch-all route
 app.get('*', (req, res) => {
   res.redirect('/');
