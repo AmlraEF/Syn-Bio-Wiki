@@ -1,0 +1,150 @@
+<% include partials/header %>
+<div class="container">
+<h1 class="paddedtitle">Toggle switch modelling</h1>
+<br>
+<p>The&nbsp;Python code used for the&nbsp;toggle switch&nbsp;modelling&nbsp;can be found in the Google&nbsp;Colaboratory&nbsp;Notebooks:&nbsp;</p>
+<ul>
+<li>Stability analysis&nbsp;[11]</li>
+<li>Parameter&nbsp;sensitivity [12]</li>
+</ul>
+<p><strong>Mathematical Model Derivation</strong></p>
+<p>The toggle switch&nbsp;modelled by Gardner&nbsp;[1]&nbsp;consists of a pair of mutually repressible repressor-promoters:&nbsp;</p>
+<br>
+<center><img src="modelling/fig3.PNG" alt="">
+  </center>
+  <br>
+<center><p><strong><em>Figure 3:&nbsp;</em></strong><em>Gardner&rsquo;s toggle switch. Symbol&nbsp;</em><em>&nbsp; <img src="modelling/fig3b.PNG" alt=""> represents&nbsp;repression.</em></p></center>
+<br>
+<p>A mathematical model of the toggle switch was derived from first principles (<strong>Appendix&nbsp;C</strong>). Simplifications and normalisations yielded dynamical a system of two ODEs:&nbsp;</p>
+<br>
+<center><img src="modelling/eq1.PNG" alt="">
+  </center>
+  <br>
+<p>where:</p>
+<p>u, v = concentration of repressors 1 and 2 (<strong>Figure 3</strong>)</p>
+<p>a<sub>1</sub>, a<sub>2</sub> = maximum rates of u and v synthesis</p>
+<p>n<sub>1</sub>, n<sub>2</sub>= cooperativity</p>
+
+<P><strong>Stability Analysis (Toggle Switch)</strong></p>
+<p>This is a stability analysis of the governing toggle switch equations:</p>
+<p>&nbsp;</p>
+
+<p><strong>Fixed points</strong> are found at &nbsp;= 0 and &nbsp;= 0:</p>
+<p>The Jacobian matrix is found by:</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>A stable fixed point is characterized by two inequalities:</p>
+<p>&tau;&nbsp; &lt; 0 and &Delta; &gt; 0 , where &tau; represents the trace of the Jacobian and &Delta; represents the determinant.</p>
+<p>&nbsp;</p>
+<p><strong>Trace:</strong></p>
+<p>Trace = &tau; = sum of diagonal elements of Jacobian matrix:</p>
+<p>&nbsp;So it can be seen that &tau; is always negative and satisfies the first inequality.</p>
+<p><strong>Determinant:</strong></p>
+<p>To find the determinant, equation &Delta; = 0 is used to find the boundaries that separate monostable from bi-stable.</p>
+<p>&Delta; =</p>
+<p>So&nbsp;</p>
+<p>The fixed points are:</p>
+<p>&nbsp;</p>
+<p>Substitute equations (E9) and (E10) back into equation (E6):</p>
+<p>&nbsp;</p>
+<p>So</p>
+<p>&nbsp;</p>
+<p>Assuming that &nbsp;and &nbsp;are very large and u &gt;&gt; v, the fixed points can be approximated to be:</p>
+<p>&nbsp;</p>
+<p>&nbsp; and</p>
+<p>&nbsp;</p>
+<p>Condition becomes:</p>
+<p>Due to symmetry, it can be shown that the other boundary is found to be at:</p>
+
+<p><strong>System Analysis</strong></p>
+<p>The&nbsp;behaviour&nbsp;of the system can be inferred by&nbsp;plotting nullclines &ndash; the values of zero repressor-promotor pair concentration change &ndash; and the flow lines.&nbsp;The fixed points are&nbsp;the&nbsp;intersections of the nullclines.&nbsp;The long-term behaviour at the fixed point can be calculated mathematically through eigenvalue calculation [13].</p>
+
+<br>
+<div class="row">
+  <div class="col-sm">
+    <img src="modelling/fig5a.PNG" alt="">a)
+  </div>
+  <div class="col-sm">
+    <img src="modelling/fig5b.PNG" alt="">b)
+  </div>
+</div>
+
+  <br>
+
+<p><strong><em>Figure 5: </em></strong><em>Nullcline plot simulated using equations 1 and 2. <strong>(a)&nbsp;</strong>Parameter selection of a</em><em><sub>1</sub></em><em>=4, a</em><em><sub>2</sub></em><em>=4 and n</em><em><sub>1</sub></em><em>=2, n</em><em><sub>2</sub></em><em>=2. System is&nbsp;bistable&nbsp;as only A and C are stable. Small perturbations from B push the system towards either stable point. Separatrix is shown in purple.&nbsp;<strong>(b)&nbsp;</strong>Parameter selection of a</em><em><sub>1</sub></em><em>&nbsp;= 4, a</em><em><sub>2</sub></em><em>=3 and n</em><em><sub>1</sub></em><em>=2, n</em><em><sub>2</sub></em><em>=2. Nullclines intersect only once, resulting in a single stable point. System is said to be monostable as a result.</em></p>
+<p></p>
+<p>Flow lines indicate trajectories dependent on initial conditions. <strong>Figure 6 </strong>shows two families of initial conditions exist for bistable systems, separated by a separatrix.</p>
+
+<br>
+<center><img src="modelling/fig6.PNG" alt="">
+  </center>
+  <br>
+
+<p><strong><em>Figure </em></strong><strong></strong><strong><em>6: </em></strong><em>Time varying behaviour of toggle switch. System alternates between synthesised protein upon appropriate inducer addition. Stability of system in response to addition of inducer 2 at t=150s demonstrates </em><em>that changes in the system are depended only on the addition of the appropriate inducer.</em></p>
+<p><strong>Effect of Initial Conditions</strong></p>
+<p>Vector fields show different initial concentrations, resulting in only two steady stable states. Some trajectories come close to the unstable point but diverge to either of the two stable points shortly after. A separatrix delineates the two families of trajectories (<strong>Figure 7</strong>).</p>
+<p>The system can only settle at the unstable point if initialised there. For small deviations from this point, the direction of flow pushes the system to either stable point. When physically implemented, stochasticity prevents stagnation at the unstable point by causing the system to fall on one side of the separatrix.</p>
+
+<br>
+<center><div class="row">
+  <div class="col-sm">
+    <img src="modelling/fig7.PNG" alt="">
+  </div>
+  <div class="col-sm">
+    <img src="modelling/fig7b.PNG" alt="">
+  </div>
+</div>
+</center>
+  <br>
+
+<p><strong><em>Figure 7:</em></strong> <em>System flow </em><em>direction indicated by arrows</em><em>. Relative</em><em> magnitude of flow represented logarithmically by colour.</em><em> Red indicates large magnitudes, blue indicates small magnitudes of flow.</em></p>
+<ul>
+<li><strong>Parameter Sensitivity</strong></li>
+</ul>
+<p><strong>Effects of Repressor Synthesis Rate</strong></p>
+<p>Simulations show repressor synthesis rates&nbsp;(<em>a</em><em><sub>1</sub></em>,<em> a</em><em><sub>2</sub></em>) need to exist within a small range to achieve&nbsp;bistability. Behaviour due to&nbsp;<em>a</em><em><sub>1</sub></em>&nbsp;and&nbsp;<em>a</em><em><sub>2</sub></em>&nbsp;parameter selection was tabulated (<strong>Figure 8</strong>). Simulations showed equilibrium was reached faster as the difference between&nbsp;a<sub>1</sub>&nbsp;and&nbsp;a<sub>2</sub>decreased.</p>
+
+<br>
+<center><img src="modelling/fig8.PNG" alt="">
+  </center>
+  <br>
+
+<p><strong><em>Figure 8: </em></strong><em>Table of system behaviour based on parameter selection. Data derived empirically with n</em><em><sub>1</sub></em><em>=2, n</em><em><sub>2</sub></em><em>=2. </em><em>Two behaviours are possible:&nbsp;bistability&nbsp;shown in maroon, and&nbsp;monostability&nbsp;shown in blue.</em></p>
+<p>Increasing&nbsp;<em>a</em><em><sub>1</sub></em>&nbsp;and&nbsp;<em>a</em><em><sub>2&nbsp;</sub></em>demonstrated an increase in steady state separation, thereby increasing definition of&nbsp;bistable&nbsp;states (<strong>Figure 9</strong>).</p>
+<br>
+<div class="row">
+  <div class="col-sm">
+    <img src="modelling/fig9.PNG" alt="">a)
+  </div>
+  <div class="col-sm">
+    <img src="modelling/fig9b.PNG" alt="">b)
+  </div>
+</div>
+<br>
+<p><strong><em>Figure 9:</em></strong><em> Effects of repressor synthesis variation. Parameters</em><strong><em>(a)</em></strong><em>: a</em><em><sub>1</sub></em><em>=3, a</em><em><sub>2</sub></em><em>=3, n</em><em><sub>1</sub></em><em>=2, n</em><em><sub>2</sub></em><em>=2. </em><em>Fixed points at u=0.38, v=2.62, and u=2.62, v=0.38. </em><em>Parameters</em><strong><em>(b)</em></strong><em>: a</em><em><sub>1</sub></em><em>=6, a</em><em><sub>2</sub></em><em>=6, n</em><em><sub>1</sub></em><em>=2, n</em><em><sub>2</sub></em><em>=2. </em><em>Fixed points at u=0.17, v=5.83, and u=5.83, v=0.17.</em></p>
+<p><strong>Effects of Hill Coefficient</strong></p>
+<p>Maximal Hill Coefficients increases the separation between nullclines at non-intersecting values. This decreases the time required for equilibrium to be reached, as the magnitude of trajectory velocity increases in this region.&nbsp;</p>
+<br>
+<div class="row">
+  <div class="col-sm">
+    <img src="modelling/fig10a.PNG" alt="">
+  </div>
+  <div class="col-sm">
+    <img src="modelling/fig10b.PNG" alt="">
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm">
+    <img src="modelling/fig10aa.PNG" alt="">a)
+  </div>
+  <div class="col-sm">
+    <img src="modelling/fig10bb.PNG" alt="">b)
+  </div>
+</div>
+
+<br>
+<p><strong>&nbsp;<em>Figure 10:</em></strong><em> Effects of Hill Coefficients variation on flow lines (top) and magnitude of flow velocity (bottom). Parameters<strong> (a)</strong>: a<sub>1</sub>=4, a<sub>2</sub>=4. n<sub>1</sub>=2, n<sub>2</sub>=2. Parameters <strong>(b)</strong>: a<sub>1</sub>=4, a<sub>2</sub>=4, n<sub>1</sub>=3, n<sub>2</sub>=3.</em></p>
+
+</div>
+<% include partials/footer %>
