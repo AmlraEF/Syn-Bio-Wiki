@@ -54,11 +54,10 @@ app.get('/safety', (req,res) => {
   res.render('Safety')
 })
 
-<<<<<<< HEAD
 app.get('/achievements', (req,res) => {
   res.render('Achievements')
 })
-=======
+
 app.get('/modelling_ts', (req, res) => {
   res.render('modelling_ts');
 });
@@ -66,7 +65,6 @@ app.get('/modelling_ts', (req, res) => {
 app.get('/modelling_o', (req, res) => {
   res.render('modelling_o');
 });
->>>>>>> dc7e91cccb4e1eeb9721d8677affde51950ca65f
 
 // Catch-all route
 app.get('*', (req, res) => {
