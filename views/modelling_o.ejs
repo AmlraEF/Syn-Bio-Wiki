@@ -1,0 +1,359 @@
+<% include partials/header %>
+<div class="container">
+<h1 class="paddedtitle">Repressilator modelling</h1>
+<br>
+<p>The Python code used for the oscillator modelling can be found in the Google Colaboratory Notebooks:</p>
+<ul>
+<li>Stability analysis [14].</li>
+<li>Parameter sensitivity [15].
+<br>
+<br>
+<p><strong>Derivation of Mathematical Model</strong></p>
+
+<p>The repressilator is an oscillator constructed by coupling an odd number of inverters in a negative feedback loop [3][10]. Our implementation uses the minimum of 3 genes (<strong>Figure 11</strong>) for simplicity. The output corresponds to the change in proteins&rsquo; concentrations due to negative feedback loops and inherent delays.</p>
+<br>
+<center><img src="modelling/fig11.png" alt="">
+
+  <br>
+<p><strong><em>Figure 11: </em></strong><em>Diagram of a repressilator (three inverters). Symbol</em><em> <img src="modelling/fig3b.png" alt=""> represents repression of the gene that follows.</em></p>
+  </center>
+<p>A model of the system formed by six ODEs was derived (<strong>Appendix B</strong>):</p>
+<br>
+<center><img src="modelling/Eq2.PNG" alt="">
+  </center>
+  <br>
+<p>where:</p>
+<br>
+<img src="modelling/Eq2_.PNG" alt=""><img src="modelling/Eq2__.PNG" alt="">
+<br>
+
+
+<p>It models the time evolution of: m<sub>1</sub>, m<sub>2</sub>, m<sub>3</sub>, p<sub>1</sub>, p<sub>2</sub>, p<sub>3</sub>. The system is identical to the repressilator, as expected, since Potvin-Trottier&rsquo;s modifications did not affect the topology.</p>
+
+<p><strong>System Analysis</strong></p>
+
+<p>The stability of the system determines whether the output oscillates. The repressilator can take two states: stable or unstable. In its stable state, all species&rsquo; concentrations tend to a steady state. In the unstable state, oscillations are produced. The aim is to generate sinusoidal oscillations that are stable (constant amplitude, frequency and period).</p>
+
+<p><strong>Stability Analysis</strong></p>
+
+<p>Standard protocols and methods of stability analysis were followed: the fixed points and eigenvalues (using the Jacobian matrix) were calculated. For a system to be stable, the real part of the system&rsquo;s eigenvalues must be negative. Conversely, to obtain oscillations (unstable state), the real part of at least one eigenvalue must be positive. The system must also have a Hopf bifurcation, which is true for the repressilator. These conditions are not sufficient for oscillations, but due to the complexity of the final condition [16], the analysis was carried out assuming it was satisfied.</p>
+<p>The following stability condition was derived (<strong>Appendix C</strong>) and plotted (<strong>Figure 12</strong>):</p>
+<br>
+<center><img src="modelling/eq3.PNG" alt="">
+  </center>
+  <br>
+<img src="modelling/eq3_.PNG" alt="">
+
+<br>
+<center><img src="modelling/fig12.png" alt="">
+
+  <br>
+
+<p><strong><em>Figure 12:</em></strong><em> Repressilator stability </em>[14]<em>.</em><em> <img src="modelling/eq4.PNG" alt=""> used is an approximation. Symbol lambda (</em>&lambda;) is the <em>eigenvalue.</em></p>
+  </center>
+<p>In order to define condition (7), all parameters except &beta; were defined within a separate variable (X) that is fixed for each value of &beta;, such that a 2D graph approximating the stable and unstable regions could be generated (<strong>Figure 12</strong>).</p>
+<p>By varying the parameters (&alpha;, &alpha;<sub>0</sub>, &beta;, n) the system tends to either a steady state or a limit cycle, which is the typical behaviour of a Hopf bifurcation: the system transitions from stable to unstable by varying some of its parameters. When stable, all protein and mRNA concentrations tend to a stable point, independent of the initial conditions. As the parameters are varied, the system goes through the critical bifurcation, into an unstable state. When unstable, if it has initial conditions that enable oscillations, an oscillatory output is obtained because all species&rsquo; concentrations follow a limit cycle.&nbsp;</p>
+
+<br>
+<p><strong>Stability Analysis (Oscillator)</strong></p>
+<p>Stability analysis [33] of the following system:</p>
+
+<br>
+<center><img src="modelling/o1.PNG" alt="">
+  </center>
+  <br>
+
+<p>where: i = 1, 2, 3</p>
+<ol>
+<li><strong>Fixed points </strong>can be found by solving the following simultaneous equations:</li>
+
+<br>
+<center><img src="modelling/o2.PNG" alt="">
+  </center>
+  <br>
+
+</ol>
+<p>From equation (35): p<sub>1=i</sub> = m<sub>i</sub>, simplifying the system to:</p><br>
+<center><img src="modelling/o3.PNG" alt="">
+  </center>
+  <br>
+<p>For the code developed by the dry lab team to solve this system numerically, access Colab notebook [14]. Solving this system gives:</p>
+
+<br>
+<center><img src="modelling/o4.PNG" alt="">
+  </center>
+  <br>
+
+<p>where</p>
+
+<br>
+<center><img src="modelling/o5.PNG" alt="">
+  </center>
+  <br>
+
+<p>from which we can obtain a more general equation:</p>
+
+<br>
+<center><img src="modelling/o6.PNG" alt="">
+  </center>
+  <br>
+
+<p>The fixed points are given by the above equation.</p>
+
+<p><strong>Eigenvalues</strong> can be found by linearising the dynamics around each fixed point (using the Taylor series expansion):</p>
+
+<br>
+<center><img src="modelling/o7.PNG" alt="">
+  </center>
+  <br>
+
+<p>where<em> <img src="modelling/o8.PNG" alt="">, <img src="modelling/o9.PNG" alt=""></em> (the Jacobian matrix) and <img src="modelling/o10.PNG" alt=""> is so small it can be discarded.</p>
+
+<br>
+<center><img src="modelling/o11.PNG" alt="">
+  </center>
+  <br>
+
+<p>where <img src="modelling/o12.PNG" alt=""></p>
+<p>We can solve this using:</p>
+
+<br>
+<center><img src="modelling/o13.PNG" alt="">
+  </center>
+  <br>
+
+<p>where <img src="modelling/o14.PNG" alt=""> and the system solution is <img src="modelling/o15.PNG" alt="">.</p>
+<p>The Jacobian satisfies the eigenvalue (&lambda;) equation:</p>
+
+<br>
+<center><img src="modelling/o16.PNG" alt="">
+  </center>
+  <br>
+
+<p>which can be rewritten as:</p>
+
+<br>
+<center><img src="modelling/o17.PNG" alt="">
+  </center>
+  <br>
+
+<p>This equation can be rearranged into the pair of equations:</p>
+
+<br>
+<center><img src="modelling/o18.PNG" alt="">
+  </center>
+  <br>
+
+<p>which can also be written as:</p>
+
+<br>
+<center><img src="modelling/o19.PNG" alt="">
+  </center>
+  <br>
+
+<p>which makes it obvious that there is a relation between the eigenvalues of X (&tau;) and the eigenvalues of the whole system (&lambda;):</p>
+
+<br>
+<center><img src="modelling/o20.PNG" alt="">
+  </center>
+  <br>
+
+<p>solving this equation for &lambda; gives:</p>
+
+<br>
+<center><img src="modelling/o21.PNG" alt="">
+  </center>
+  <br>
+
+<p><strong>X</strong> can be factorised to have a factor corresponding to a permutation matrix; therefore, its eigenvalues will lie on the complex unit circle, such that A n-dimensional permutation matrix has eigenvalues that satisfy for some integer k. Factorising <strong>X </strong>gives:</p>
+
+<br>
+<center><img src="modelling/o22.PNG" alt="">
+  </center>
+  <br>
+
+<p>where the permutation matrix is <img src="modelling/o23.PNG" alt=""> with k = 3. Therefore, the zeros of &tau; on the complex unit circle are given by the equation <img src="modelling/o24.PNG" alt="">, with the solution: for m = 1, 2, 3in the complex plane. This is equivalent to:</p>
+
+<br>
+<center><img src="modelling/o25.PNG" alt="">
+  </center>
+  <br>
+
+<p>Inserting these solutions into (57) results in six eigenvalues for the system (32) (33):</p>
+
+<br>
+<center><img src="modelling/o26.PNG" alt="">
+  </center>
+  <br>
+
+<p>The system will be stable if the real part of the &lambda; is negative. To look at the point at which the system changes between stable and unstable, the point should be studied. For &tau;<sub>1</sub> = X = 1, the result is:</p>
+
+<br>
+<center><img src="modelling/o27.PNG" alt="">
+  </center>
+  <br>
+
+<p>Therefore, for X &lt; 1, &lambda; will be negative. This is ensured since X is negative by definition.&tau;<sub>2</sub> and &tau;<sub>3</sub> are complex conjugates and lead to the same condition for stability:</p>
+
+<br>
+<center><img src="modelling/o28.PNG" alt="">
+  </center>
+  <br>
+
+<p>which can be rewritten as:</p>
+
+<br>
+<center><img src="modelling/o29.PNG" alt="">
+  </center>
+  <br>
+
+<p>where <img src="modelling/o30.PNG" alt=""> and <img src="modelling/o31.PNG" alt=""> and obtain the condition:</p>
+
+<br>
+<center><img src="modelling/o32.PNG" alt="">
+  </center>
+  <br>
+
+<p>The positive sign equation is always satisfied as the cosine is negative for the given angles. Therefore, the negative sign equation is studied:</p>
+
+<br>
+<center><img src="modelling/o33.PNG" alt="">
+  </center>
+  <br>
+
+<p>By using the relation <img src="modelling/o34.PNG" alt=""> and plugging it into the above equation and squaring gives:</p>
+
+<br>
+<center><img src="modelling/o35.PNG" alt="">
+  </center>
+  <br>
+
+<p>If we square again and substitute the original terms for the cosine term and &rho;:</p>
+<br>
+<center><img src="modelling/o36.PNG" alt="">
+  </center>
+  <br>
+
+<p><strong>Effect of Parameters and Initial Conditions</strong></p>
+
+<p>Through simulations, three cases were found on the effect of the initial conditions of mRNA and protein species:</p>
+<p><strong>Case 1: </strong></p>
+<p>Regardless of parameters and of whether the system is stable or unstable, if:&nbsp;</p>
+<center><p> m<sub>1</sub> = m<sub>2</sub> = m<sub>3</sub> and p<sub>1</sub> = p<sub>2</sub> = p<sub>3</sub> </p></center>
+<p>the system will reach a steady state (<strong>Figures 13 </strong>-<strong> 14</strong>), maintaining the symmetry (9).</p>
+
+<br>
+<center><img src="modelling/fig13.png" alt="">
+
+  <br>
+
+<p><strong><em>Figure 13: </em></strong><em>Repressilator time plot &ndash; steady state (initial conditions (9)).</em></p>  </center>
+
+
+<br>
+<center><img src="modelling/fig14.png" alt="">
+
+  <br>
+
+
+<p><strong><em>Figure 14:</em></strong><em> TetR phase plot &ndash; steady state. Each line is one case of different equal initial concentrations. Only tetR is plotted as other genes&rsquo; phase plots are identical.</em></p>
+  </center>
+<p><strong>Case 2:</strong></p>
+<p>When condition (9) is not met, with the parameters corresponding to the unstable region), the system oscillates after an initial transient period (<strong>Figure 15</strong>). In the phase plot, all species tend to the unique limit cycle (based on the parameters) shown in bold in <strong>Figure 16</strong>.</p>
+
+
+<br>
+<center><img src="modelling/fig15.png" alt="">
+
+  <br>
+
+
+<p><strong><em>Figure 15:</em></strong> <em>Repressilator time plot </em><em>&ndash; oscillatory state (initial conditions drive protein and mRNA concentrations to oscillate). Parameters: &alpha; = 216.4, &alpha;<sub>0</sub> = 0.2164, n = 2 from Biomodels website </em>[17]<em>.</em></p>
+  </center>
+<br>
+<center><img src="modelling/fig16.png" alt="">
+
+  <br>
+
+<p><strong><em>Figure 16:</em></strong><em> Repressilator phase plot &ndash; oscillatory state. Each curve corresponds to a different set of initial concentrations. As values for the parameters are the same for all simulations, all the resulting lines eventually settle to the same limit cycle, shown in bold. Parameters: &alpha; = 216.4, &alpha<sub>0</sub> = 0.2164, n = 2.</em></p>
+  </center>
+<p><strong>Case 3:</strong></p>
+<p>For parameters in the stable region, the system tends to a steady state (<strong>Figure 17 &ndash; 18</strong>).</p>
+
+<br>
+<center><img src="modelling/fig17.png" alt="">
+
+  <br>
+
+<p><strong><em>Figure 17: </em></strong><em>Repressilator time plot &ndash; steady state.</em></p>  </center>
+
+<br>
+<center><img src="modelling/fig18.png" alt="">
+
+  <br>
+
+<p><strong><em>Figure 18:</em></strong><em> TetR phase plot &ndash; steady state.</em></p>  </center>
+
+<p><strong>Parameter Sensitivity</strong></p>
+
+<p><strong>Necessary Parameter Values for Oscillations</strong></p>
+
+<p><strong>Influence of</strong> <strong>&beta;:</strong></p>
+<p>&beta; is the ratio of protein to mRNA degradation rates. Whilst protein degradation rate is within our control, mRNA&rsquo;s degradation rate is not. In E.coli, mRNA molecules degrade faster than proteins, &beta; &lt; 1, therefore parameters in this range were studied. Simulations were run with parameters that enable oscillations (&alpha; = 216.4, &alpha;<sub>0</sub> = 0.2164, n = 2) (&nbsp;[17]) to find the critical value &beta; = 0.029 (this transition occurs when mRNA degrades 34.5 times faster than protein):</p>
+<ul>
+<li>If &beta; &lt; 0.029, the protein degradation rate is very slow and the system will produced damped oscillations until it reaches a steady state (<strong>Figure 19</strong>).</li>
+<li>If 0.029 &lt; &beta; &lt; 1, protein degradation rate increases and stable oscillations are obtained (<strong>Figure 20</strong>). As &beta; tends towards 1, the protein degradation rate is increasing; therefore, the period of oscillations will decrease.</li>
+</ul>
+
+<br>
+<center><img src="modelling/fig19.png" alt="">
+
+  <br>
+
+<p><strong><em>Figure 19:</em></strong><em> Parameter </em> &beta; = 0.01 <em>. Oscillations decay until they reach a fixed point.</em></p>  </center>
+<ol>
+<li>a) b)</li>
+</ol>
+
+<br>
+<center><img src="modelling/fig20.png" alt="">
+
+  <br>
+
+<p><strong><em>Figure 20:</em></strong><em> Parameter </em> &beta; = 0.2<em>: <strong>a)</strong> stable sustained oscillations. <strong>b)</strong> enlarged sample oscillations demonstrate an imperfect sinusoid. </em></p>
+  </center>
+<p>Within the repressilator, perfect sinusoids are unachievable, so are approximated here. This is because the concentration of tetR remains minimal for double its maximal time, since during the time at which it is minimal, the other two repressor proteins reach their maximum and fall back to their minimum.</p>
+<p><strong>Influence of &alpha; and &alpha;<sub>0</sub>:</strong></p>
+<p>&alpha; : Protein production rate</p>
+<p>&alpha;<sub>0</sub>: System leakiness</p>
+<p>If the leakiness increases, the production rates of the rest of the system need to increase to compensate for it. Therefore, if &alpha;<sub>0</sub> increases, so will &alpha;. To obtain oscillations, a small increase in &alpha;<sub>0</sub>(e.g. 0.5 to 1), will require a much larger increase of &alpha;(e.g. approximately, 11 to 50). The relationship between the increase needed in &alpha; with respect to the increase needed in &alpha;<sub>0</sub> is a fast-growing function (<strong>Figure 21</strong>).</p>
+
+<br>
+<center><img src="modelling/fig21.png" alt="">
+
+  <br>
+
+<p><strong><em>Figure&nbsp;21:</em></strong>&nbsp;<em>Relationship between&nbsp;&alpha; and &alpha;</em><em><sub>0</sub></em><em>&nbsp;determining whether the system is stable or unstable. To find this relationship, all other parameters were set to values that enable oscillations (&alpha; = 216.4, &alpha;<sub>0</sub> = 0.2164, n = 2)</em><em>(</em>[17]<em>).</em></p>
+  </center>
+<p><strong>Influence of the Hill Coefficient (n):</strong></p>
+<p>The Hill coefficient is a property of the promoter related to the transcription rate. Simulations show that the system starts presenting oscillations when n is approximately 1.75 (<strong>Figure 22</strong>). Therefore, we can be sure that for n &ge; 2, the system produces oscillations.</p>
+
+<br>
+<center><img src="modelling/fig22.png" alt="">
+
+  <br>
+
+<p><strong><em>Figure 22:</em></strong><em> <strong>Top left</strong>: stable steady state (n=1). <strong>Top right</strong>: damped oscillations (n=1.5). <strong>Bottom left</strong>: oscillating system (n=1.75). <strong>Bottom right</strong>: oscillating system (n=2).</em></p>
+  </center>
+<p><strong>Influence of Parameters on Oscillation Amplitude and Periodicity</strong></p>
+
+<p>Parameters were studied in the oscillating region with default values &alpha; = 216.4, &alpha;<sub>0</sub> = 0.2164, n = 2 [17]. <strong>Figure 23 </strong>shows the effect of changing parameters on amplitude and periodicity of oscillations. This data can be used to appropriately select parameters.</p>
+
+<br>
+<center><img src="modelling/fig23.png" alt="">
+
+  <br>
+
+<p><strong><em>Figure 23: </em></strong><em>Effect on amplitude and periodicity of increasing: <strong>Left</strong>: &beta;: 0-2. <strong>Middle</strong>: n: 2-5. <strong>Right</strong>: &alpha;: 0-500.</em></p></div>
+  </center>
+<% include partials/footer %>
