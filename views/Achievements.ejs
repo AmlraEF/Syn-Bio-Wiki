@@ -2,13 +2,51 @@
 <div class="container">
 <h1 class="paddedtitle">Achievements</h1>
 <br>
+<div class="row">
+  <div class="col-sm" style="border-right: solid 1px #000;">
+    <h4><strong>Toggle switch</strong></h4>
+    <br>
+    <p><span style="text-decoration: underline;">Mathematical model:</span></p>
+    <center><img src="modelling/eq1.PNG" alt="">
+      </center>
+    <p><span style="text-decoration: underline;">Successful simulations:</span></p>
+    <ul><p>-Time plot of toggle switch alternating between &lsquo;off&rsquo; and &lsquo;on</p>
+    <p>-Nullcline plots to find fixed points and stability of the system</p></ul>
+    <p><span style="text-decoration: underline;">Characterised parameters that can be varied in wet lab:</span></p>
+    <ul><p>-Initial concentrations effect on flow direction and velocity for bistability</p>
+    <p>-Repressors&rsquo; synthesis rates effect on bistable states</p>
+    <p>-Hill Coefficient effect on flow velocity</p></ul>
+    <p><span style="text-decoration: underline;">Toggle switch toolkit:</span></p>
+    <ul><p>-Built with:</p>
+    <ul><p>➢High success rate<sup>1</sup></p>
+    <p>➢Modularity<sup>2</sup></p></ul>
+    <p>-Plasmid design and toolkit</p>
+    <p>-Successful culture growth of plasmid 2A+2B</p></ul>
+    <p>&nbsp;</p>
+  </div>
+  <div class="col-sm">
+    <ul>
+    <h4><strong>Oscillator</strong></h4>
+    <br>
+    <p><span style="text-decoration: underline;">Mathematical model (Elowitz&rsquo;s repressilator):</span></p>
+    <center><img src="modelling/Eq2.PNG" alt="">
+      </center>
+    <p><span style="text-decoration: underline;">Successful simulations (Elowitz&rsquo;s repressilator):</span></p>
+    <ul><p>-Stability analysis successfully completed (fixed points, defined stable and unstable regions)<sup>3</sup></p>
+    <p>-Stable state: steady state</p>
+    <p>-Unstable state produces stable oscillations (constant amplitude, frequency and period) that approximate a sinusoid</p>
+    <p>-Effect of initial concentrations on oscillations-Ranges of parameters &alpha;0, &alpha;, &beta;, n with an oscillatory output</p></ul>
+    <p><span style="text-decoration: underline;">Characterised parameters and their ranges to vary in wet lab for an oscillatory output</span></p>
+    <p><span style="text-decoration: underline;">Tested pre-built oscillator in wet lab (Potvin-Trottier&rsquo;s modified repressilator):</span></p>
+    <ul><p>-Cells fluoresced in lab within the order of magnitude of the predicted oscillation (microscopy set up for cell tracking)<sup>4</sup></p>
+    </ul>
+  </div>
+</div>
 
-$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$
-<br><br>
 <hr>
 <sub id="[1]"><sup>1</sup> 67% of parts transformed with no mutations</sub>
 <br><sub id="[2]"><sup>2</sup> The toolkit has 16 working interchangeable parts. This toolkit allows toggle switches with varying qualities to be produced,drastically cutting down time required by researchers to synthesise the parts required </sub>
-<br><sub id="[3]"><sup>3</sup> $\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$ </sub>
-<br><sub id="[4]"><sup>4</sup> Agarose pads,that provide better resolution than the usual techniques for live cell microscopy, were usedin a novel wayin preparation for single cell visualisationof the oscillator through cell tracking. </sub>
+<br><sub id="[3]"><sup>3</sup> System stable when <img src="modelling/eq3.PNG" alt=""> <img src="modelling/eq3_.PNG" alt=""></sub>
+<br><sub id="[4]"><sup>4</sup> Agarose pads,that provide better resolution than the usual techniques for live cell microscopy, were usedin a novel wayin preparation for single cell visualisationof the oscillator through cell tracking. </sub></ul>
 </div>
 <% include partials/footer %>
