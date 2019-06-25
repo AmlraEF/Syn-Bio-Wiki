@@ -20,14 +20,14 @@
   </center>
 <p>A model of the system formed by six ODEs was derived (<strong>Appendix B</strong>):</p>
 <br>
-<center><img style="height: 5em;" src="modelling/Eq2.PNG" alt="">
+<center><img style="height: 7em;" src="modelling/Eq2.PNG" alt="">
   </center>
   <br>
 <p>where:</p>
 <br>
-<img src="modelling/Eq2_.PNG" alt=""><img src="modelling/Eq2__.PNG" alt="">
+<img style="height: 10em;" src="modelling/Eq2_.PNG" alt=""><img style="height: 12em;" src="modelling/Eq2__.PNG" alt="">
 <br>
-
+<br>
 
 <p>It models the time evolution of: m<sub>1</sub>, m<sub>2</sub>, m<sub>3</sub>, p<sub>1</sub>, p<sub>2</sub>, p<sub>3</sub>. The system is identical to the repressilator, as expected, since Potvin-Trottier&rsquo;s modifications did not affect the topology.</p>
 
@@ -40,17 +40,18 @@
 <p>Standard protocols and methods of stability analysis were followed: the fixed points and eigenvalues (using the Jacobian matrix) were calculated. For a system to be stable, the real part of the system&rsquo;s eigenvalues must be negative. Conversely, to obtain oscillations (unstable state), the real part of at least one eigenvalue must be positive. The system must also have a Hopf bifurcation, which is true for the repressilator. These conditions are not sufficient for oscillations, but due to the complexity of the final condition [16], the analysis was carried out assuming it was satisfied.</p>
 <p>The following stability condition was derived (<strong>Appendix C</strong>) and plotted (<strong>Figure 12</strong>):</p>
 <br>
-<center><img src="modelling/eq3.PNG" alt="">
+<center><img style="height: 5em;" src="modelling/eq3.PNG" alt="">
   </center>
   <br>
-<img src="modelling/eq3_.PNG" alt="">
-
+<img style="height: 3em;" src="modelling/eq3_.PNG" alt="">
+<br>
+<br>
 <br>
 <center><img src="modelling/fig12.png" alt="">
 
   <br>
 
-<p><strong><em>Figure 12:</em></strong><em> Repressilator stability </em>[14]<em>.</em><em> <img src="modelling/eq4.PNG" alt=""> used is an approximation. Symbol lambda (</em>&lambda;) is the <em>eigenvalue.</em></p>
+<p><strong><em>Figure 12:</em></strong><em> Repressilator stability </em>[14]<em>.</em><em> <img style="height: 2em;" src="modelling/eq4.PNG" alt=""> used is an approximation. Symbol lambda (</em>&lambda;) is the <em>eigenvalue.</em></p>
   </center>
 <p>In order to define condition (7), all parameters except &beta; were defined within a separate variable (X) that is fixed for each value of &beta;, such that a 2D graph approximating the stable and unstable regions could be generated (<strong>Figure 12</strong>).</p>
 <p>By varying the parameters (&alpha;, &alpha;<sub>0</sub>, &beta;, n) the system tends to either a steady state or a limit cycle, which is the typical behaviour of a Hopf bifurcation: the system transitions from stable to unstable by varying some of its parameters. When stable, all protein and mRNA concentrations tend to a stable point, independent of the initial conditions. As the parameters are varied, the system goes through the critical bifurcation, into an unstable state. When unstable, if it has initial conditions that enable oscillations, an oscillatory output is obtained because all species&rsquo; concentrations follow a limit cycle.&nbsp;</p>
@@ -60,7 +61,7 @@
 <p>Stability analysis [33] of the following system:</p>
 
 <br>
-<center><img src="modelling/o1.PNG" alt="">
+<center><img style="height: 8em;" src="modelling/o1.PNG" alt="">
   </center>
   <br>
 
@@ -69,33 +70,33 @@
 <li><strong>Fixed points </strong>can be found by solving the following simultaneous equations:</li>
 
 <br>
-<center><img src="modelling/o2.PNG" alt="">
+<center><img style="height: 8em;" src="modelling/o2.PNG" alt="">
   </center>
   <br>
 
 </ol>
 <p>From equation (35): p<sub>1=i</sub> = m<sub>i</sub>, simplifying the system to:</p><br>
-<center><img src="modelling/o3.PNG" alt="">
+<center><img style="height: 13em;" src="modelling/o3.PNG" alt="">
   </center>
   <br>
 <p>For the code developed by the dry lab team to solve this system numerically, access Colab notebook [14]. Solving this system gives:</p>
 
 <br>
-<center><img src="modelling/o4.PNG" alt="">
+<center><img style="height: 3em;" src="modelling/o4.PNG" alt="">
   </center>
   <br>
 
 <p>where</p>
 
 <br>
-<center><img src="modelling/o5.PNG" alt="">
+<center><img style="height: 3.5em;" src="modelling/o5.PNG" alt="">
   </center>
   <br>
 
 <p>from which we can obtain a more general equation:</p>
 
 <br>
-<center><img src="modelling/o6.PNG" alt="">
+<center><img style="height: 4em;" src="modelling/o6.PNG" alt="">
   </center>
   <br>
 
@@ -104,58 +105,58 @@
 <p><strong>Eigenvalues</strong> can be found by linearising the dynamics around each fixed point (using the Taylor series expansion):</p>
 
 <br>
-<center><img src="modelling/o7.PNG" alt="">
+<center><img style="height: 4em;" src="modelling/o7.PNG" alt="">
   </center>
   <br>
 
-<p>where<em> <img src="modelling/o8.PNG" alt="">, <img src="modelling/o9.PNG" alt=""></em> (the Jacobian matrix) and <img src="modelling/o10.PNG" alt=""> is so small it can be discarded.</p>
+<p>where<em> <img style="height: 1.5em;" src="modelling/o8.PNG" alt="">, <img style="height: 2.1em;" src="modelling/o9.PNG" alt=""></em> (the Jacobian matrix) and <img style="height: 1.5em;" src="modelling/o10.PNG" alt=""> is so small it can be discarded.</p>
 
 <br>
-<center><img src="modelling/o11.PNG" alt="">
+<center><img style="height: 8em;" src="modelling/o11.PNG" alt="">
   </center>
   <br>
 
-<p>where <img src="modelling/o12.PNG" alt=""></p>
+<p>where <img style="height: 2em;" src="modelling/o12.PNG" alt=""></p>
 <p>We can solve this using:</p>
 
 <br>
-<center><img src="modelling/o13.PNG" alt="">
+<center><img style="height: 4em;" src="modelling/o13.PNG" alt="">
   </center>
   <br>
 
-<p>where <img src="modelling/o14.PNG" alt=""> and the system solution is <img src="modelling/o15.PNG" alt="">.</p>
+<p>where <img style="height: 9em;" src="modelling/o14.PNG" alt=""> and the system solution is <img style="height: 2em;" src="modelling/o15.PNG" alt="">.</p>
 <p>The Jacobian satisfies the eigenvalue (&lambda;) equation:</p>
 
 <br>
-<center><img src="modelling/o16.PNG" alt="">
+<center><img style="height: 4em;" src="modelling/o16.PNG" alt="">
   </center>
   <br>
 
 <p>which can be rewritten as:</p>
 
 <br>
-<center><img src="modelling/o17.PNG" alt="">
+<center><img style="height: 4.5em;" src="modelling/o17.PNG" alt="">
   </center>
   <br>
 
 <p>This equation can be rearranged into the pair of equations:</p>
 
 <br>
-<center><img src="modelling/o18.PNG" alt="">
+<center><img style="height: 8em;" src="modelling/o18.PNG" alt="">
   </center>
   <br>
 
 <p>which can also be written as:</p>
 
 <br>
-<center><img src="modelling/o19.PNG" alt="">
+<center><img style="height: 10em;" src="modelling/o19.PNG" alt="">
   </center>
   <br>
 
 <p>which makes it obvious that there is a relation between the eigenvalues of X (&tau;) and the eigenvalues of the whole system (&lambda;):</p>
 
 <br>
-<center><img src="modelling/o20.PNG" alt="">
+<center><img style="height: 6em;" src="modelling/o20.PNG" alt="">
   </center>
   <br>
 
@@ -169,11 +170,11 @@
 <p><strong>X</strong> can be factorised to have a factor corresponding to a permutation matrix; therefore, its eigenvalues will lie on the complex unit circle, such that A n-dimensional permutation matrix has eigenvalues that satisfy for some integer k. Factorising <strong>X </strong>gives:</p>
 
 <br>
-<center><img src="modelling/o22.PNG" alt="">
+<center><img style="height: 5em;" src="modelling/o22.PNG" alt="">
   </center>
   <br>
 
-<p>where the permutation matrix is <img src="modelling/o23.PNG" alt=""> with k = 3. Therefore, the zeros of &tau; on the complex unit circle are given by the equation <img src="modelling/o24.PNG" alt="">, with the solution: for m = 1, 2, 3in the complex plane. This is equivalent to:</p>
+<p>where the permutation matrix is <img style="height: 4.5em;" src="modelling/o23.PNG" alt=""> with k = 3. Therefore, the zeros of &tau; on the complex unit circle are given by the equation <img style="height: 2.2em;" src="modelling/o24.PNG" alt="">, with the solution: for m = 1, 2, 3in the complex plane. This is equivalent to:</p>
 
 <br>
 <center><img src="modelling/o25.PNG" alt="">
@@ -183,55 +184,55 @@
 <p>Inserting these solutions into (57) results in six eigenvalues for the system (32) (33):</p>
 
 <br>
-<center><img src="modelling/o26.PNG" alt="">
+<center><img style="height: 4em;" src="modelling/o26.PNG" alt="">
   </center>
   <br>
 
 <p>The system will be stable if the real part of the &lambda; is negative. To look at the point at which the system changes between stable and unstable, the point should be studied. For &tau;<sub>1</sub> = X = 1, the result is:</p>
 
 <br>
-<center><img src="modelling/o27.PNG" alt="">
+<center><img style="height: 9em;" src="modelling/o27.PNG" alt="">
   </center>
   <br>
 
 <p>Therefore, for X &lt; 1, &lambda; will be negative. This is ensured since X is negative by definition.&tau;<sub>2</sub> and &tau;<sub>3</sub> are complex conjugates and lead to the same condition for stability:</p>
 
 <br>
-<center><img src="modelling/o28.PNG" alt="">
+<center><img style="height: 4em;" src="modelling/o28.PNG" alt="">
   </center>
   <br>
 
 <p>which can be rewritten as:</p>
 
 <br>
-<center><img src="modelling/o29.PNG" alt="">
+<center><img style="height: 2.6em;" src="modelling/o29.PNG" alt="">
   </center>
   <br>
 
-<p>where <img src="modelling/o30.PNG" alt=""> and <img src="modelling/o31.PNG" alt=""> and obtain the condition:</p>
+<p>where <img style="height: 1.5em;" src="modelling/o30.PNG" alt=""> and <img style="height: 1.7em;" src="modelling/o31.PNG" alt=""> and obtain the condition:</p>
 
 <br>
-<center><img src="modelling/o32.PNG" alt="">
+<center><img style="height: 3em;" src="modelling/o32.PNG" alt="">
   </center>
   <br>
 
 <p>The positive sign equation is always satisfied as the cosine is negative for the given angles. Therefore, the negative sign equation is studied:</p>
 
 <br>
-<center><img src="modelling/o33.PNG" alt="">
+<center><img style="height: 3.7em;" src="modelling/o33.PNG" alt="">
   </center>
   <br>
 
-<p>By using the relation <img src="modelling/o34.PNG" alt=""> and plugging it into the above equation and squaring gives:</p>
+<p>By using the relation <img style="height: 2.2em;" src="modelling/o34.PNG" alt=""> and plugging it into the above equation and squaring gives:</p>
 
 <br>
-<center><img src="modelling/o35.PNG" alt="">
+<center><img style="height: 4em;" src="modelling/o35.PNG" alt="">
   </center>
   <br>
 
 <p>If we square again and substitute the original terms for the cosine term and &rho;:</p>
 <br>
-<center><img src="modelling/o36.PNG" alt="">
+<center><img style="height: 9em;" src="modelling/o36.PNG" alt="">
   </center>
   <br>
 
