@@ -11,14 +11,14 @@
 <br>
 <p><strong>Derivation of Mathematical Model</strong></p>
 
-<p>The repressilator is an oscillator constructed by coupling an odd number of inverters in a negative feedback loop [3][10]. Our implementation uses the minimum of 3 genes (<strong>Figure 11</strong>) for simplicity. The output corresponds to the change in proteins&rsquo; concentrations due to negative feedback loops and inherent delays.</p>
+<p>The repressilator is an oscillator constructed by coupling an odd number of inverters in a negative feedback loop. Our implementation uses the minimum of 3 genes (<strong>Figure 11</strong>) for simplicity. The output corresponds to the change in proteins&rsquo; concentrations due to negative feedback loops and inherent delays.</p>
 <br>
 <center><img style="height: 22em;" src="modelling/fig11.png" alt="">
 
   <br>
 <p><strong><em>Figure 11: </em></strong><em>Diagram of a repressilator (three inverters). Symbol</em><em> <img src="modelling/fig3b.png" alt=""> represents repression of the gene that follows.</em></p>
   </center>
-<p>A model of the system formed by six ODEs was derived (<strong>Appendix B</strong>):</p>
+<p>A model of the system formed by six ODEs was derived:</p>
 <br>
 <center><img style="height: 7em;" src="modelling/Eq2.PNG" alt="">
   </center>
@@ -37,8 +37,8 @@
 
 <p><strong>Stability Analysis</strong></p>
 
-<p>Standard protocols and methods of stability analysis were followed: the fixed points and eigenvalues (using the Jacobian matrix) were calculated. For a system to be stable, the real part of the system&rsquo;s eigenvalues must be negative. Conversely, to obtain oscillations (unstable state), the real part of at least one eigenvalue must be positive. The system must also have a Hopf bifurcation, which is true for the repressilator. These conditions are not sufficient for oscillations, but due to the complexity of the final condition [16], the analysis was carried out assuming it was satisfied.</p>
-<p>The following stability condition was derived (<strong>Appendix C</strong>) and plotted (<strong>Figure 12</strong>):</p>
+<p>Standard protocols and methods of stability analysis were followed: the fixed points and eigenvalues (using the Jacobian matrix) were calculated. For a system to be stable, the real part of the system&rsquo;s eigenvalues must be negative. Conversely, to obtain oscillations (unstable state), the real part of at least one eigenvalue must be positive. The system must also have a Hopf bifurcation, which is true for the repressilator. These conditions are not sufficient for oscillations, but due to the complexity of the final condition, the analysis was carried out assuming it was satisfied.</p>
+<p>The following stability condition was derived and plotted (<strong>Figure 12</strong>):</p>
 <br>
 <center><img style="height: 5em;" src="modelling/eq3.PNG" alt="">
   </center>
@@ -51,14 +51,14 @@
 
   <br>
 
-<p><strong><em>Figure 12:</em></strong><em> Repressilator stability </em>[14]<em>.</em><em> <img style="height: 2em;" src="modelling/eq4.PNG" alt=""> used is an approximation. Symbol lambda (</em>&lambda;) is the <em>eigenvalue.</em></p>
+<p><strong><em>Figure 12:</em></strong><em> Repressilator stability.</em><em> <img style="height: 2em;" src="modelling/eq4.PNG" alt=""> used is an approximation. Symbol lambda (</em>&lambda;) is the <em>eigenvalue.</em></p>
   </center>
 <p>In order to define condition (7), all parameters except &beta; were defined within a separate variable (X) that is fixed for each value of &beta;, such that a 2D graph approximating the stable and unstable regions could be generated (<strong>Figure 12</strong>).</p>
 <p>By varying the parameters (&alpha;, &alpha;<sub>0</sub>, &beta;, n) the system tends to either a steady state or a limit cycle, which is the typical behaviour of a Hopf bifurcation: the system transitions from stable to unstable by varying some of its parameters. When stable, all protein and mRNA concentrations tend to a stable point, independent of the initial conditions. As the parameters are varied, the system goes through the critical bifurcation, into an unstable state. When unstable, if it has initial conditions that enable oscillations, an oscillatory output is obtained because all species&rsquo; concentrations follow a limit cycle.&nbsp;</p>
 
 <br>
 <p><strong>Stability Analysis (Oscillator)</strong></p>
-<p>Stability analysis [33] of the following system:</p>
+<p>Stability analysis of the following system:</p>
 
 <br>
 <center><img style="height: 8em;" src="modelling/o1.PNG" alt="">
@@ -79,7 +79,7 @@
 <center><img style="height: 13em;" src="modelling/o3.PNG" alt="">
   </center>
   <br>
-<p>For the code developed by the dry lab team to solve this system numerically, access Colab notebook [14]. Solving this system gives:</p>
+<p>For the code developed by the dry lab team to solve this system numerically, access Colab notebook. Solving this system gives:</p>
 
 <br>
 <center><img style="height: 3em;" src="modelling/o4.PNG" alt="">
@@ -335,7 +335,7 @@
 
   <br>
 
-<p><strong><em>Figure&nbsp;21:</em></strong>&nbsp;<em>Relationship between&nbsp;&alpha; and &alpha;</em><em><sub>0</sub></em><em>&nbsp;determining whether the system is stable or unstable. To find this relationship, all other parameters were set to values that enable oscillations (&alpha; = 216.4, &alpha;<sub>0</sub> = 0.2164, n = 2)</em><em>(</em>[17]<em>).</em></p>
+<p><strong><em>Figure&nbsp;21:</em></strong>&nbsp;<em>Relationship between&nbsp;&alpha; and &alpha;</em><em><sub>0</sub></em><em>&nbsp;determining whether the system is stable or unstable. To find this relationship, all other parameters were set to values that enable oscillations (&alpha; = 216.4, &alpha;<sub>0</sub> = 0.2164, n = 2)</em><em>.</em></p>
   </center>
 <p><strong>Influence of the Hill Coefficient (n):</strong></p>
 <p>The Hill coefficient is a property of the promoter related to the transcription rate. Simulations show that the system starts presenting oscillations when n is approximately 1.75 (<strong>Figure 22</strong>). Therefore, we can be sure that for n &ge; 2, the system produces oscillations.</p>
@@ -349,7 +349,7 @@
   </center>
 <p><strong>Influence of Parameters on Oscillation Amplitude and Periodicity</strong></p>
 
-<p>Parameters were studied in the oscillating region with default values &alpha; = 216.4, &alpha;<sub>0</sub> = 0.2164, n = 2 [17]. <strong>Figure 23 </strong>shows the effect of changing parameters on amplitude and periodicity of oscillations. This data can be used to appropriately select parameters.</p>
+<p>Parameters were studied in the oscillating region with default values &alpha; = 216.4, &alpha;<sub>0</sub> = 0.2164, n = 2. <strong>Figure 23 </strong>shows the effect of changing parameters on amplitude and periodicity of oscillations. This data can be used to appropriately select parameters.</p>
 
 <br>
 <center><img src="modelling/fig23.png" alt="">
